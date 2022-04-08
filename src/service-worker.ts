@@ -75,12 +75,11 @@ registerRoute(
     return url.pathname === "/test.json";
   },
   async ({ url, request, event, params }) => {
-    const response = await fetch(request);
-    const responseBody = await response.text();
+    // const response = await fetch(request);
+    // const responseBody = await response.text();
+    const responseBody = "Straight from service-worker";
 
-    return new Response(`${responseBody} <!-- Look Ma. Added Content. -->`, {
-      headers: response.headers,
-    });
+    return new Response(`${responseBody} <!-- Look Ma. Added Content. -->`, {});
   }
 );
 
