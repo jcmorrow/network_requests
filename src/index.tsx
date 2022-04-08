@@ -23,3 +23,7 @@ serviceWorkerRegistration.register();
 reportWebVitals();
 
 fetch("/test.json");
+
+var request = new XMLHttpRequest();
+request.open("GET", "/test.json");
+request.send();
